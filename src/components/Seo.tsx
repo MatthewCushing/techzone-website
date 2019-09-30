@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 
@@ -9,7 +9,7 @@ interface Props {
   title: string;
 }
 
-const SEO: FC<Props> = ({
+const SEO: React.FunctionComponent<Props> = ({
   description = '',
   lang = 'en',
   meta = [],

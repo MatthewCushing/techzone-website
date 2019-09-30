@@ -7,7 +7,7 @@ import Footer from './Footer';
 import './layout.css';
 
 interface Props {
-  children?: ReactNode;
+  children: ReactNode;
 }
 
 const Layout: FC<Props> = ({ children }) => {
