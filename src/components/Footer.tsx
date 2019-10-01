@@ -1,12 +1,89 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { css, SerializedStyles } from '@emotion/core';
+import { Global, css, SerializedStyles } from '@emotion/core';
 import styled from '@emotion/styled';
 import Icon from './Icon';
+import { colors, fonts } from './Theme';
+
+//
+// ──────────────────────────────────────────────────────────── I ──────────
+//   :::::: C S S   S T Y L E S : :  :   :    :     :        :          :
+// ──────────────────────────────────────────────────────────────────────
+//
 
 const styles: SerializedStyles = css`
   margin-right: 40px;
 `;
+
+const Form = styled.form`
+  font-family: 'Courier Prime';
+  font-size: 1.5em;
+`;
+
+const Grid = styled.div`
+  display: grid;
+  grid-template-columns: 20% 30% 50%;
+  font-family: ${fonts.primary};
+  grid-template-rows: 1fr auto;
+  background-color: ${colors.darkGray};
+  color: ${colors.lightGray};
+  padding: 48px 140px 0 140px;
+`;
+
+const Row1Col1 = styled.div`
+  & {
+    display: flex;
+    flex-direction: column;
+    grid: 1 1 / 2 2;
+  }
+`;
+
+const Row1Col2 = styled.div`
+  & {
+    grid: 2 1 / 3 2;
+  }
+`;
+
+const Row1Col3 = styled.div`
+  & {
+    grid: 3 1 / 4 2;
+  }
+`;
+
+const Row2 = styled.div`
+  & {
+    grid-row: 2 / 3;
+    grid-column: 1 / -1;
+    font-size: 14px;
+    font-family: ${fonts.primary};
+    justify-self: center;
+  }
+`;
+
+const H1 = styled.h1`
+  & {
+    font-size: 1.5em;
+    text-shadow: 0px 3px 6px #00000029;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }
+`;
+
+const A = styled(Link)`
+  & {
+    text-decoration: none;
+    font-family: ${fonts.primary};
+    font-size: 18px;
+    color: ${colors.lightGray};
+    margin-bottom: 30px;
+  }
+`;
+
+//
+// ────────────────────────────────────────────────────────────────────── II ──────────
+//   :::::: R E A C T   C O M P O N E N T : :  :   :    :     :        :          :
+// ────────────────────────────────────────────────────────────────────────────────
+//
 
 const Footer: React.SFC = () => {
   const date = new Date();
@@ -31,57 +108,21 @@ const Footer: React.SFC = () => {
       </Row1Col2>
       <Row1Col3>
         <H1>Have A Question?</H1>
+        <Form>
+          My name is
+          <input type="text" htmlFor="question" />
+          and I would like to ask
+          <br />
+          <input type="text" htmlFor="question" />
+          <br />
+          Please contact me by my email:
+          <br />
+          <input type="text" htmlFor="question" />
+        </Form>
       </Row1Col3>
       <Row2>Copyright &copy; {date.getFullYear()} Matthew Cushing</Row2>
     </Grid>
   );
 };
-
-const Grid = styled.div`
-  display: grid;
-  grid-template-columns: 20% 30% 50%;
-  grid-template-rows: 1fr auto;
-  background-color: #51585e;
-  color: #ced4d5;
-  padding: 48px 140px 0 140px;
-`;
-
-const Row1Col1 = styled.div`
-  display: flex;
-  flex-direction: column;
-  grid: 1 1 / 2 2;
-`;
-
-const Row1Col2 = styled.div`
-  grid: 2 1 / 3 2;
-`;
-
-const Row1Col3 = styled.div`
-  grid: 3 1 / 4 2;
-`;
-
-const Row2 = styled.div`
-  grid-row: 2 / 3;
-  grid-column: 1 / -1;
-  font-size: 14px;
-  font-family: Lato;
-  justify-self: center;
-`;
-
-const H1 = styled.h1`
-  font-size: 24px;
-  text-shadow: 0px 3px 6px #00000029;
-  font-family: Lato;
-  font-weight: 400;
-  margin-bottom: 30px;
-`;
-
-const A = styled(Link)`
-  text-decoration: none;
-  font-family: Lato;
-  font-size: 18px;
-  color: #ced4d5;
-  margin-bottom: 30px;
-`;
 
 export default Footer;
