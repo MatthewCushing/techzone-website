@@ -73,6 +73,20 @@ const A = styled(Link)`
     margin-bottom: 30px;
 `;
 
+const Input = styled.input`
+    border: none;
+    border-bottom: 3px solid ${colors.lightGreen};
+    background-color: transparent;
+    outline: none;
+    box-shadow: none;
+    margin: 10px 10px;
+
+    &:focus {
+        outline: none;
+        border-bottom-color: ${colors.darkBlue};
+    }
+`;
+
 //
 // ────────────────────────────────────────────────────────── II ──────────
 //   :::::: C O M P O N E N T : :  :   :    :     :        :          :
@@ -102,16 +116,24 @@ const Footer: React.SFC = () => {
             </Row1Col2>
             <Row1Col3>
                 <H1>Have A Question?</H1>
-                <Form>
-                    My name is
-                    <input type="text" htmlFor="question" />
-                    and I would like to ask
+                <Form action="#">
+                    <label htmlFor="name">
+                        My name is
+                        <Input type="text" required />
+                    </label>
+                    <label htmlFor="question">
+                        and I would like to ask
+                        <br />
+                        <Input type="text" required />
+                        <br />
+                    </label>
+                    <label htmlFor="email">
+                        Please contact me by my email:
+                        <br />
+                        <Input type="email" required />
+                    </label>
                     <br />
-                    <input type="text" htmlFor="question" />
-                    <br />
-                    Please contact me by my email:
-                    <br />
-                    <input type="text" htmlFor="question" />
+                    <button type="submit">Submit</button>
                 </Form>
             </Row1Col3>
             <Row2>Copyright &copy; {date.getFullYear()} Matthew Cushing</Row2>
