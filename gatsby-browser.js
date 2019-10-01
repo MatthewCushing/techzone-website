@@ -9,4 +9,4 @@
 import './src/components/layout.css';
 import 'typeface-lato';
 import 'typeface-merriweather';
-import 'typeface-courier-prime';
+import 'typeface-inconsolata';

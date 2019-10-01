@@ -21,11 +21,6 @@ const styles: SerializedStyles = css`
     margin-right: 40px;
 `;
 
-const Form = styled.form`
-    font-family: 'Courier Prime';
-    font-size: 1.5em;
-`;
-
 const Grid = styled.div`
     display: grid;
     grid-template-columns: 20% 30% 50%;
@@ -48,6 +43,7 @@ const Row1Col2 = styled.div`
 
 const Row1Col3 = styled.div`
     grid: 3 1 / 4 2;
+    justify-self: center;
 `;
 
 const Row2 = styled.div`
@@ -63,27 +59,61 @@ const H1 = styled.h1`
     text-shadow: 0px 3px 6px #00000029;
     font-weight: 400;
     margin-bottom: 30px;
+
+    &.center {
+        text-align: center;
+    }
 `;
 
 const A = styled(Link)`
     text-decoration: none;
     font-family: ${fonts.primary};
     font-size: 18px;
-    color: ${colors.lightGray};
     margin-bottom: 30px;
+    overflow: hidden;
+    align-self: flex-start;
+
+    &:link {
+        color: ${colors.lightGray};
+    }
+
+    &:visited {
+        color: inherit;
+    }
+
+    &:hover {
+        border-bottom: 2px solid ${colors.lightGray};
+    }
+`;
+
+const Form = styled.form`
+    font-family: Inconsolata;
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 40px;
 `;
 
 const Input = styled.input`
     border: none;
-    border-bottom: 3px solid ${colors.lightGreen};
+    border-bottom: 4px solid ${colors.lightGreen};
     background-color: transparent;
     outline: none;
     box-shadow: none;
-    margin: 10px 10px;
+    color: ${colors.lightGray};
+    text-align: center;
+    margin: 20px 10px;
 
     &:focus {
         outline: none;
         border-bottom-color: ${colors.darkBlue};
+    }
+
+    &.name {
+        width: 175px;
+    }
+
+    &.full {
+        width: 600px;
     }
 `;
 
@@ -115,22 +145,22 @@ const Footer: React.SFC = () => {
                 <Icon name="youtube" />
             </Row1Col2>
             <Row1Col3>
-                <H1>Have A Question?</H1>
+                <H1 className="center">Have A Question?</H1>
                 <Form action="#">
                     <label htmlFor="name">
                         My name is
-                        <Input type="text" required />
+                        <Input className="name" type="text" required />
                     </label>
                     <label htmlFor="question">
                         and I would like to ask
                         <br />
-                        <Input type="text" required />
+                        <Input className="full" type="text" required />
                         <br />
                     </label>
                     <label htmlFor="email">
                         Please contact me by my email:
                         <br />
-                        <Input type="email" required />
+                        <Input className="full" type="email" required />
                     </label>
                     <br />
                     <button type="submit">Submit</button>
