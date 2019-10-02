@@ -10,6 +10,7 @@ import { css, SerializedStyles } from '@emotion/core';
 import styled from '@emotion/styled';
 import Icon from './Icon';
 import { colors, fonts } from './Theme';
+import Button from './pieces/Button';
 
 //
 // ──────────────────────────────────────────────────── II ──────────
@@ -23,6 +24,9 @@ const styles: SerializedStyles = css`
 
 const Grid = styled.div`
     display: grid;
+    max-height: 500px;
+    min-height: 500px;
+    padding-right: 140px;
     grid-template-columns: 20% 30% 50%;
     font-family: ${fonts.primary};
     grid-template-rows: 1fr auto;
@@ -43,7 +47,7 @@ const Row1Col2 = styled.div`
 
 const Row1Col3 = styled.div`
     grid: 3 1 / 4 2;
-    justify-self: center;
+    justify-self: end;
 `;
 
 const Row2 = styled.div`
@@ -146,24 +150,49 @@ const Footer: React.SFC = () => {
             </Row1Col2>
             <Row1Col3>
                 <H1 className="center">Have A Question?</H1>
-                <Form action="#">
+                <Form
+                    action="https://formspree.io/cushing.matt@gmail.com"
+                    method="POST"
+                >
                     <label htmlFor="name">
                         My name is
-                        <Input className="name" type="text" required />
+                        <Input
+                            className="name"
+                            type="text"
+                            name="name"
+                            required
+                        />
                     </label>
                     <label htmlFor="question">
                         and I would like to ask
                         <br />
-                        <Input className="full" type="text" required />
+                        <Input
+                            className="full"
+                            type="text"
+                            name="question"
+                            required
+                        />
                         <br />
                     </label>
                     <label htmlFor="email">
                         Please contact me by my email:
                         <br />
-                        <Input className="full" type="email" required />
+                        <Input
+                            className="full"
+                            type="email"
+                            name="_replyto"
+                            required
+                        />
                     </label>
                     <br />
-                    <button type="submit">Submit</button>
+                    <Button
+                        styles={css`
+                            margin-top: 20px;
+                        `}
+                        small
+                    >
+                        Submit
+                    </Button>
                 </Form>
             </Row1Col3>
             <Row2>Copyright &copy; {date.getFullYear()} Matthew Cushing</Row2>
