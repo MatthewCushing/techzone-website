@@ -76,6 +76,7 @@ const A = styled(Link)`
     margin-bottom: 30px;
     overflow: hidden;
     align-self: flex-start;
+    transition: all 0.5s ease 0s;
 
     &:link {
         color: ${colors.lightGray};
@@ -86,7 +87,8 @@ const A = styled(Link)`
     }
 
     &:hover {
-        border-bottom: 2px solid ${colors.lightGray};
+        transform: translateY(-5px) translateX(5px);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
     }
 `;
 
@@ -106,10 +108,12 @@ const Input = styled.input`
     color: ${colors.lightGray};
     text-align: center;
     margin: 20px 10px;
+    transition: all 0.3s ease 0s;
 
     &:focus {
         outline: none;
-        border-bottom-color: ${colors.darkBlue};
+        border-bottom-color: #fff;
+        transform: translateY(-5px);
     }
 
     &.name {
@@ -142,11 +146,21 @@ const Footer: React.SFC = () => {
             </Row1Col1>
             <Row1Col2>
                 <H1>Social Media</H1>
-                <Icon name="facebook" styles={styles} />
-                <Icon name="linkedIn" styles={styles} />
-                <Icon name="tumblr" styles={styles} />
-                <Icon name="twitter" styles={styles} />
-                <Icon name="youtube" />
+                <Link to="https://www.facebook.com">
+                    <Icon name="facebook" styles={styles} />
+                </Link>
+                <Link to="https://www.linkedin.com">
+                    <Icon name="linkedIn" styles={styles} />
+                </Link>
+                <Link to="https://www.tumblr.com">
+                    <Icon name="tumblr" styles={styles} />
+                </Link>
+                <Link to="https://www.twitter.com">
+                    <Icon name="twitter" styles={styles} />
+                </Link>
+                <Link to="https://www.youtube.com">
+                    <Icon name="youtube" />
+                </Link>
             </Row1Col2>
             <Row1Col3>
                 <H1 className="center">Have A Question?</H1>
