@@ -4,11 +4,9 @@
 // ────────────────────────────────────────────────────────────────
 //
 
-import React from 'react';
-import { Link } from 'gatsby';
-
-import Layout from '../components/Layout';
-import SEO from '../components/Seo';
+import React, { FC } from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
+import Img from 'gatsby-image';
 
 //
 // ────────────────────────────────────────────────────────── II ──────────
@@ -16,16 +14,25 @@ import SEO from '../components/Seo';
 // ────────────────────────────────────────────────────────────────────
 //
 
-const SecondPage: React.FC = () => (
-    <Layout>
-        <SEO title="Page two" />
-        <h1>Hi from the second page</h1>
-        <p>Welcome to page 2</p>
-        <Link to="/">Go back to the homepage</Link>
-    </Layout>
-);
+const Image: FC = () => {
+    const data = useStaticQuery(graphql`
+        query {
+            placeholderImage: file(
+                relativePath: { eq: "gatsby-astronaut.png" }
+            ) {
+                childImageSharp {
+                    fluid(maxWidth: 300) {
+                        ...GatsbyImageSharpFluid
+                    }
+                }
+            }
+        }
+    `);
 
-export default SecondPage;
+    return <Img fluid={data.placeholderImage.childImageSharp.fluid} />;
+};
+
+export default Image;
 
 //
 // ────────────────────────────────────────────────────────────────────── END ─────

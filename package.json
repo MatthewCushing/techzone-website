@@ -23,6 +23,9 @@
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-helmet": "^5.2.1",
+    "typeface-inconsolata": "0.0.72",
+    "typeface-lato": "0.0.75",
+    "typeface-merriweather": "0.0.72",
     "typescript": "^3.6.3"
   },
   "devDependencies": {
@@ -35,6 +38,7 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-hooks": "^2.1.1",
     "gatsby-plugin-eslint": "^2.0.5",
     "prettier": "^1.18.2"
   },
@@ -46,6 +50,7 @@
     "graphql-types": "graphql-codegen",
     "build": "gatsby build",
     "develop": "gatsby develop",
+    "dev-lan": "gatsby develop --host 0.0.0.0 -p 8000",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
