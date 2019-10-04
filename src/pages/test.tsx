@@ -9,6 +9,8 @@ const Test: React.SFC<TestProps> = () => {
             <ul>
                 <li>This</li>
                 <li>Is</li>
+                Add some text here
+                <h1>Some more text</h1>
                 <li>Html</li>
                 <li>Here</li>
             </ul>
