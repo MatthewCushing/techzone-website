@@ -81,7 +81,7 @@ export const A = styled(Link)`
     }
 
     &:hover {
-        transform: translateY(-5px);
+        transform: translateY(-5px) translateX(5px);
         box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
     }
 `;

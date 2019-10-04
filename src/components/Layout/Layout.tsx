@@ -7,7 +7,6 @@ import { useStaticQuery, graphql } from 'gatsby';
 
 import Header from './Header';
 import Footer from './Footer';
-import Navbar from './Navbar';
 import { Wrapper } from '.';
 
 //
@@ -35,7 +34,6 @@ const Layout: FC<Props> = ({ children }) => {
 
     return (
         <>
-            <Navbar />
             <Header siteTitle={data.site.siteMetadata.title} />
             <Wrapper>
                 <main>{children}</main>
