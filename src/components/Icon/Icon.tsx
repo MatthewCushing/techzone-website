@@ -1,21 +1,18 @@
 //
-// ────────────────────────────────────────────────────── I ──────────
-//   :::::: I M P O R T S : :  :   :    :     :        :          :
-// ────────────────────────────────────────────────────────────────
+// ─── IMPORTS ────────────────────────────────────────────────────────────────────
 //
 
 import React from 'react';
 import { SerializedStyles } from '@emotion/core';
-import Facebook from './Svg/Facebook';
-import LinkedIn from './Svg/LinkedIn';
-import Tumblr from './Svg/Tumblr';
-import Twitter from './Svg/Twitter';
-import Youtube from './Svg/Youtube';
+
+import Facebook from './icons/Facebook';
+import LinkedIn from './icons/LinkedIn';
+import Tumblr from './icons/Tumblr';
+import Twitter from './icons/Twitter';
+import Youtube from './icons/Youtube';
 
 //
-// ────────────────────────────────────────────────── II ──────────
-//   :::::: T Y P E S : :  :   :    :     :        :          :
-// ────────────────────────────────────────────────────────────
+// ─── TYPES ──────────────────────────────────────────────────────────────────────
 //
 
 interface Props {
@@ -28,9 +25,7 @@ interface Props {
 }
 
 //
-// ────────────────────────────────────────────────────────── III ──────────
-//   :::::: C O M P O N E N T : :  :   :    :     :        :          :
-// ────────────────────────────────────────────────────────────────────
+// ─── COMPONENT ──────────────────────────────────────────────────────────────────
 //
 
 const Icon: React.FunctionComponent<Props> = ({

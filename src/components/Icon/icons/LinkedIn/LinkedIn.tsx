@@ -5,10 +5,9 @@
 //
 
 import React from 'react';
-import styled from '@emotion/styled';
 import { css, SerializedStyles } from '@emotion/core';
 
-import { colors } from '../Theme';
+import SVG from './LinkedIn-Styles';
 
 //
 // ────────────────────────────────────────────────── II ──────────
@@ -25,23 +24,7 @@ interface Props {
 }
 
 //
-// ──────────────────────────────────────────────────── III ──────────
-//   :::::: S T Y L E S : :  :   :    :     :        :          :
-// ──────────────────────────────────────────────────────────────
-//
-
-const SVG = styled('svg')`
-    fill: ${colors.lightGray};
-    transition: all 0.3s ease 0s;
-
-    &:hover {
-        fill: #0077b5;
-        transform: translateY(-5px);
-    }
-`;
-
-//
-// ────────────────────────────────────────────────────────── IV ──────────
+// ────────────────────────────────────────────────────────── III ──────────
 //   :::::: C O M P O N E N T : :  :   :    :     :        :          :
 // ────────────────────────────────────────────────────────────────────
 //

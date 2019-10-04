@@ -1,19 +1,14 @@
 //
-// ────────────────────────────────────────────────────── I ──────────
-//   :::::: I M P O R T S : :  :   :    :     :        :          :
-// ────────────────────────────────────────────────────────────────
+// ─── IMPORTS ────────────────────────────────────────────────────────────────────
 //
 
 import React from 'react';
-import styled from '@emotion/styled';
 import { css, SerializedStyles } from '@emotion/core';
 
-import { colors } from '../Theme';
+import SVG from './Youtube-Styles';
 
 //
-// ────────────────────────────────────────────────── II ──────────
-//   :::::: T Y P E S : :  :   :    :     :        :          :
-// ────────────────────────────────────────────────────────────
+// ─── TYPES ──────────────────────────────────────────────────────────────────────
 //
 
 interface Props {
@@ -24,20 +19,8 @@ interface Props {
     styles?: SerializedStyles;
 }
 
-const SVG = styled('svg')`
-    fill: ${colors.lightGray};
-    transition: all 0.3s ease 0s;
-
-    &:hover {
-        fill: #ff0000;
-        transform: translateY(-5px);
-    }
-`;
-
 //
-// ────────────────────────────────────────────────────────── III ──────────
-//   :::::: C O M P O N E N T : :  :   :    :     :        :          :
-// ────────────────────────────────────────────────────────────────────
+// ─── COMPONENT ──────────────────────────────────────────────────────────────────
 //
 
 const Youtube: React.FunctionComponent<Props> = ({

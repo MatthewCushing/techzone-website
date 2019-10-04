@@ -11,8 +11,8 @@ import { css, Global } from '@emotion/core';
 
 import Layout from '../components/Layout';
 import Image from '../components/Image';
-import SEO from '../components/Seo';
-import { colors } from '../components/Theme';
+import SEO from '../components/global/Seo';
+import { colors } from '../components/global/Theme';
 
 //
 // ──────────────────────────────────────────────────── II ──────────
