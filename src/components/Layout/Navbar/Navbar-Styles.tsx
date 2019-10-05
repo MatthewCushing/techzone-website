@@ -25,7 +25,9 @@ export const Ul = styled.ul`
         text-decoration: none;
         color: #fff;
 
-        &.home {
+        &.home,
+        &.about,
+        &.contact {
             color: ${colors.lightGreen};
         }
     }

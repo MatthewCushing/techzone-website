@@ -43,17 +43,17 @@ const Navbar: React.FC = () => {
                 </Link>
             </Second>
             <Third>
-                <Link className="link home" to="/">
+                <Link className="link" activeClassName="home" to="/">
                     Home
                 </Link>
             </Third>
             <Fourth>
-                <Link className="link" to="/about">
+                <Link className="link" activeClassName="about" to="/about">
                     About
                 </Link>
             </Fourth>
             <Last>
-                <Link className="link" to="/contact">
+                <Link className="link" activeClassName="contact" to="/contact">
                     Contact
                 </Link>
             </Last>
