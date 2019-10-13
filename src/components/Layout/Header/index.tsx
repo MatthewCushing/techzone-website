@@ -21,7 +21,7 @@ interface Props {
 
 const Header: React.FC<Props> = ({ siteTitle }) => {
     const data = useStaticQuery(graphql`
-        query Images {
+        query {
             image: file(relativePath: { eq: "landing-header-crop.jpg" }) {
                 childImageSharp {
                     fluid(maxHeight: 1000) {

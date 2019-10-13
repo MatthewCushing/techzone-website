@@ -3,15 +3,26 @@
 //
 
 import React from 'react';
-import NotFoundPage from '../components/views/404';
+
+import Layout from '../../Layout';
+import WorkingTogether from './components/WorkingTogether';
+import { Container } from './styles';
 
 //
 // ─── COMPONENT ──────────────────────────────────────────────────────────────────
 //
 
-const NotFound: React.FC = () => <NotFoundPage />;
+const Index: React.FC = () => {
+    return (
+        <Layout>
+            <Container>
+                <WorkingTogether />
+            </Container>
+        </Layout>
+    );
+};
 
-export default NotFound;
+export default Index;
 
 //
 // ────────────────────────────────────────────────────────────────────── END ─────
