@@ -2,28 +2,31 @@
 // ─── IMPORTS ────────────────────────────────────────────────────────────────────
 //
 
-import React, { FC } from 'react';
-import { Global } from '@emotion/core';
+import React from 'react';
 
-import Layout from '../components/Layout';
-import { Wrapper, global } from '../components/pages/index/styles';
+import SiteLinks from './components/SiteLinks';
+import SocialMedia from './components/SocialMedia';
+import QuestionForm from './components/QuestionForm';
+import { Grid, Row2 } from './styles';
 
 //
 // ─── COMPONENT ──────────────────────────────────────────────────────────────────
 //
 
-const IndexPage: FC = () => {
+const Footer: React.SFC = () => {
+    const date = new Date();
+
     return (
-        <>
-            <Global styles={global} />
-            <Layout>
-                <p>Testing</p>
-            </Layout>
-        </>
+        <Grid>
+            <SiteLinks />
+            <SocialMedia />
+            <QuestionForm />
+            <Row2>Copyright &copy; {date.getFullYear()} Matthew Cushing</Row2>
+        </Grid>
     );
 };
 
-export default IndexPage;
+export default Footer;
 
 //
 // ────────────────────────────────────────────────────────────────────── END ─────
