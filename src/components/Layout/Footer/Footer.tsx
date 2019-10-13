@@ -5,6 +5,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import { css } from '@emotion/core';
+import { useSpring, animated } from 'react-spring';
 
 import Icon from '../../Icon';
 import Button from '../../reusable/Button';
@@ -25,36 +26,60 @@ import {
 // ─── COMPONENT ──────────────────────────────────────────────────────────────────
 //
 
+// &:hover {
+//     transform: translateY(-5px) translateX(5px);
+//     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+// }
+
 const Footer: React.SFC = () => {
+    const SocialMedia = animated(Link);
+    const Links = animated(A);
     const date = new Date();
+    const raise = useSpring({
+        from: {
+            transform: 'translate3d(0, 0, 0)',
+        },
+        transform: 'translate3d(0, 200px, 0)',
+        color: '#ff00ff',
+    });
 
     return (
         <Grid>
             <Row1Col1>
                 <H1>Site Links</H1>
-                <A to="/">HOME</A>
-                <A to="/">ABOUT</A>
-                <A to="/">BLOGS</A>
-                <A to="/">TEAMS</A>
-                <A to="/">CONTACT</A>
+                <Links style={raise} to="/">
+                    HOME
+                </Links>
+                <Links style={raise} to="/">
+                    ABOUT
+                </Links>
+                <Links style={raise} to="/">
+                    BLOGS
+                </Links>
+                <Links style={raise} to="/">
+                    TEAMS
+                </Links>
+                <Links style={raise} to="/">
+                    CONTACT
+                </Links>
             </Row1Col1>
             <Row1Col2>
                 <H1>Social Media</H1>
-                <Link to="https://www.facebook.com">
+                <SocialMedia style={raise} to="https://www.facebook.com">
                     <Icon name="facebook" styles={styles} />
-                </Link>
-                <Link to="https://www.linkedin.com">
+                </SocialMedia>
+                <SocialMedia style={raise} to="https://www.linkedin.com">
                     <Icon name="linkedIn" styles={styles} />
-                </Link>
-                <Link to="https://www.tumblr.com">
+                </SocialMedia>
+                <SocialMedia style={raise} to="https://www.tumblr.com">
                     <Icon name="tumblr" styles={styles} />
-                </Link>
-                <Link to="https://www.twitter.com">
+                </SocialMedia>
+                <SocialMedia style={raise} to="https://www.twitter.com">
                     <Icon name="twitter" styles={styles} />
-                </Link>
-                <Link to="https://www.youtube.com">
+                </SocialMedia>
+                <SocialMedia style={raise} to="https://www.youtube.com">
                     <Icon name="youtube" />
-                </Link>
+                </SocialMedia>
             </Row1Col2>
             <Row1Col3>
                 <H1 className="center">Have A Question?</H1>

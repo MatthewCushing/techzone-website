@@ -79,11 +79,6 @@ export const A = styled(Link)`
     &:visited {
         color: inherit;
     }
-
-    &:hover {
-        transform: translateY(-5px) translateX(5px);
-        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-    }
 `;
 
 export const Form = styled.form`

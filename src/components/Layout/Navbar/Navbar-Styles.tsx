@@ -3,6 +3,7 @@
 //
 
 import styled from '@emotion/styled';
+import { animated } from 'react-spring';
 
 import { colors, fonts } from '../../global/Theme';
 
@@ -10,7 +11,7 @@ import { colors, fonts } from '../../global/Theme';
 // ─── STYLES ─────────────────────────────────────────────────────────────────────
 //
 
-export const Ul = styled.ul`
+export const Ul = animated(styled.ul`
     display: flex;
     list-style: none;
     position: absolute;
@@ -19,7 +20,7 @@ export const Ul = styled.ul`
     font-family: ${fonts.primary};
     font-size: 24px;
     color: #fff;
-    margin-top: 48px;
+    /* margin-top: 48px; */
 
     & > li > .link {
         text-decoration: none;
@@ -31,7 +32,13 @@ export const Ul = styled.ul`
             color: ${colors.lightGreen};
         }
     }
-`;
+
+    /* html:not([data-scroll='0']) {
+        .sticky {
+            background-color: #fff;
+        }
+    } */
+`);
 
 export const First = styled.li`
     margin-left: 140px;

@@ -8,6 +8,7 @@ import React, { FC } from 'react';
 import { Link } from 'gatsby';
 import styled from '@emotion/styled';
 import { css, Global } from '@emotion/core';
+import { useSpring, animated, config } from 'react-spring';
 
 import Layout from '../components/Layout';
 import Image from '../components/Image';
@@ -39,11 +40,18 @@ const global = css`
 //
 
 const IndexPage: FC = () => {
+    const test = useSpring({});
+
     return (
         <>
             <Global styles={global} />
             <Layout>
                 <SEO title="Home" />
+                <br />
+                <br />
+                <animated.div style={test}>Hehehe</animated.div>
+                <br />
+                <br />
                 <h1>Hi people</h1>
                 <p>Welcome to your new Gatsby site.</p>
                 <p>Now go build something great.</p>
