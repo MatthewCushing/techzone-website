@@ -111,6 +111,14 @@ Otherwise my email is: cushing.matt@gmail.com
 
 The club's email is: techzonectucs@gmail.com
 
+---
+
+<a href="https://www.browserstack.com"><img alt="Browserstack Logo" src="src/images/Browserstack-logo.png" height="60"></a>
+
+Thank you to Browser Stack to supporting Open Source and allowing us to test our websites and applications free of charge on different devices.  Check them out!
+
+---
+
 ## 🎓 Learning Gatsby
 
 Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.org/). Here are some places to start:
