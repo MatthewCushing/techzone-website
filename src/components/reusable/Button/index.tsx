@@ -5,7 +5,7 @@
 import React, { ReactNode } from 'react';
 import { SerializedStyles } from '@emotion/core';
 
-import SubmitButton from './Button-Styles';
+import SubmitButton from './styles';
 
 //
 // ─── TYPES ──────────────────────────────────────────────────────────────────────

@@ -6,7 +6,7 @@
 
 // You can delete this file if you're not using it
 
-import './src/components/Global/layout.css';
+import './src/components/global/layout.css';
 import 'typeface-lato';
 import 'typeface-merriweather';
 import 'typeface-inconsolata';

@@ -8,7 +8,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import Header from './Header';
 import Footer from './Footer';
 import Navbar from './Navbar';
-import { Wrapper } from './styles';
+import { Container } from './styles';
 
 //
 // ─── TYPES ──────────────────────────────────────────────────────────────────────
@@ -34,18 +34,12 @@ const Layout: FC<Props> = ({ children }) => {
     `);
 
     return (
-        <>
+        <Container>
             <Navbar />
             <Header siteTitle={data.site.siteMetadata.title} />
-            <Wrapper>
-                <main>{children}</main>
-                <footer>
-                    &copy; {new Date().getFullYear()}, Built with{' '}
-                    <a href="https://www.gatsbyjs.org">Gatsby</a>
-                </footer>
-            </Wrapper>
+            <main>{children}</main>
             <Footer />
-        </>
+        </Container>
     );
 };
 

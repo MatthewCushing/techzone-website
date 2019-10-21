@@ -13,6 +13,16 @@
         "import/resolver": {
             "node": {
                 "extensions": [".js", ".jsx", ".ts", ".tsx"]
+            },
+            "alias": {
+                "map": [
+                    ["src", "./src"],
+                    ["global", "./src/components/global"],
+                    ["utility", "./src/components/utility"],
+                    ["reusable", "./src/components/reusable"],
+                    ["views", "./src/components/views"]
+                ],
+                "extensions": [".ts", ".tsx", ".jsx", ".js"]
             }
         }
     },

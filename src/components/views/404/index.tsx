@@ -3,15 +3,23 @@
 //
 
 import React from 'react';
-import NotFoundPage from '../components/views/404';
+
+import Layout from 'src/components/Layout';
+import SEO from 'global/Seo';
 
 //
 // ─── COMPONENT ──────────────────────────────────────────────────────────────────
 //
 
-const NotFound: React.FC = () => <NotFoundPage />;
+const NotFoundPage: React.FC = () => (
+    <Layout>
+        <SEO title="404: Not found" />
+        <h1>NOT FOUND</h1>
+        <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+    </Layout>
+);
 
-export default NotFound;
+export default NotFoundPage;
 
 //
 // ────────────────────────────────────────────────────────────────────── END ─────
