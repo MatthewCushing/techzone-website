@@ -5,9 +5,9 @@
 import React from 'react';
 import { css } from '@emotion/core';
 
-import { H1 } from '../../styles';
+import Button from 'reusable/Button';
+import { H1 } from 'src/components/Layout/Footer/styles';
 import { Container, Form, Input } from './styles';
-import Button from '../../../../re-usable/Button';
 
 //
 // ─── COMPONENT ──────────────────────────────────────────────────────────────────

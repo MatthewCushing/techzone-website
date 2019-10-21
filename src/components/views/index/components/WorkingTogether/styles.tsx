@@ -38,7 +38,6 @@ export const H3 = styled.h3`
     font-family: ${fonts.primary};
     font-size: 24px;
     margin-bottom: 30px;
-    /* margin-top: 32px; */
 `;
 
 export const P = styled.p`

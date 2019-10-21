@@ -1,3 +1,6 @@
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const path = require('path');
+
 module.exports = {
     siteMetadata: {
         title: `Gatsby Default Starter`,
@@ -5,6 +8,16 @@ module.exports = {
         author: `Matt Cushing`,
     },
     plugins: [
+        {
+            resolve: `gatsby-plugin-root-import`,
+            options: {
+                src: path.join(__dirname, 'src'),
+                global: path.join(__dirname, 'src/components/global'),
+                reusable: path.join(__dirname, 'src/components/reusable'),
+                utility: path.join(__dirname, 'src/components/utility'),
+                views: path.join(__dirname, 'src/components/views'),
+            },
+        },
         `gatsby-plugin-typescript`,
         `gatsby-plugin-eslint`,
         `gatsby-plugin-react-helmet`,

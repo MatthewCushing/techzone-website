@@ -4,8 +4,8 @@
 
 import React from 'react';
 
-import Layout from '../../Layout';
-import SEO from '../../global/Seo';
+import Layout from 'src/components/Layout';
+import SEO from 'global/Seo';
 
 //
 // ─── COMPONENT ──────────────────────────────────────────────────────────────────

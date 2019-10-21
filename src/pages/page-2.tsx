@@ -7,8 +7,8 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
-import Layout from '../components/Layout';
-import SEO from '../components/global/Seo';
+import SEO from 'global/Seo';
+import Layout from 'src/components/Layout';
 
 //
 // ────────────────────────────────────────────────────────── II ──────────

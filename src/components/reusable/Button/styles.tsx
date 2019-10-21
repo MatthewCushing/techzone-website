@@ -55,7 +55,8 @@ const SubmitButton = styled.button<ButtonProps>`
     letter-spacing: 1.2px;
     border-radius: 5px;
     transition: all 0.3s ease 0s;
-    padding: auto;
+    padding: 10px 20px;
+    font-weight: 400;
     font-size: 18px;
     ${secondaryButton};
     ${smallButton};

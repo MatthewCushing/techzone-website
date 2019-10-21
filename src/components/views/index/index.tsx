@@ -4,8 +4,9 @@
 
 import React from 'react';
 
-import Layout from '../../Layout';
+import Layout from 'src/components/Layout/index';
 import WorkingTogether from './components/WorkingTogether';
+import CorePrinciples from './components/CorePrinciples';
 import { Container } from './styles';
 
 //
@@ -17,6 +18,7 @@ const Index: React.FC = () => {
         <Layout>
             <Container>
                 <WorkingTogether />
+                <CorePrinciples />
             </Container>
         </Layout>
     );

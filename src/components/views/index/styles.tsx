@@ -12,6 +12,9 @@ import { colors } from '../../global/Theme';
 
 export const Container = styled.div`
     background-color: ${colors.lightBlue};
-    position: relative;
     width: 100vw;
+    position: relative;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr;
 `;
