@@ -7,7 +7,7 @@ import React from 'react';
 import Layout from 'src/components/Layout/index';
 import WorkingTogether from './components/WorkingTogether';
 import CorePrinciples from './components/CorePrinciples';
-import { Container } from './styles';
+import * as style from './styles';
 
 //
 // ─── COMPONENT ──────────────────────────────────────────────────────────────────
@@ -16,10 +16,10 @@ import { Container } from './styles';
 const Index: React.FC = () => {
     return (
         <Layout>
-            <Container>
+            <div css={style.container}>
                 <WorkingTogether />
                 <CorePrinciples />
-            </Container>
+            </div>
         </Layout>
     );
 };

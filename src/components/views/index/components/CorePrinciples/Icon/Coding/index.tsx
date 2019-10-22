@@ -5,7 +5,7 @@
 import React from 'react';
 import { css, SerializedStyles } from '@emotion/core';
 
-import SVG from './styles';
+import * as style from './styles';
 
 //
 // ─── TYPES ──────────────────────────────────────────────────────────────────────
@@ -30,13 +30,14 @@ const Coding: React.FunctionComponent<Props> = ({
     styles,
 }) => {
     return (
-        <SVG
+        <svg
             xmlns="http://www.w3.org/2000/svg"
             width={width}
             height={height}
             viewBox={viewBox}
             css={css`
                 ${styles}
+                ${style.svg}
             `}
         >
             <path
@@ -114,7 +115,7 @@ const Coding: React.FunctionComponent<Props> = ({
                     transform="translate(-282.88 -81.856)"
                 />
             </g>
-        </SVG>
+        </svg>
     );
 };
 

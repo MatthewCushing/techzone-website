@@ -2,8 +2,7 @@
 // ─── IMPORTS ────────────────────────────────────────────────────────────────────
 //
 
-import styled from '@emotion/styled';
-import Img from 'gatsby-image';
+import { css } from '@emotion/core';
 
 import { colors, fonts } from '../../../../global/Theme';
 
@@ -11,7 +10,7 @@ import { colors, fonts } from '../../../../global/Theme';
 // ─── STYLES ─────────────────────────────────────────────────────────────────────
 //
 
-export const Container = styled.div`
+export const container = css`
     background-color: ${colors.lightBlue};
     width: 100vw;
     display: grid;
@@ -21,25 +20,25 @@ export const Container = styled.div`
     width: 100%;
 `;
 
-export const Image = styled(Img)`
+export const image = css`
     border-radius: 5px;
     grid-column: 1 / 2;
     margin-right: 112px;
     vertical-align: top;
 `;
 
-export const Article = styled.article`
+export const article = css`
     grid-column: 2 / 3;
     margin-left: 30px;
 `;
 
-export const H3 = styled.h3`
+export const heading = css`
     color: ${colors.darkBlue};
     font-family: ${fonts.primary};
     font-size: 24px;
     margin-bottom: 30px;
 `;
 
-export const P = styled.p`
+export const p = css`
     font-family: ${fonts.secondary};
 `;

@@ -1,19 +1,13 @@
-import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
 import { colors, fonts } from 'global/Theme';
-
-export const IconAlignment = styled.div`
-    text-align: center;
-    margin-bottom: 2rem;
-`;
 
 export const iconAlignment = css`
     text-align: center;
     margin-bottom: 2rem;
 `;
 
-export const Container = styled.div`
+export const container = css`
     background-color: ${colors.darkGreen};
     font-family: ${fonts.primary};
     font-weight: 300;
@@ -22,7 +16,7 @@ export const Container = styled.div`
     color: white;
 `;
 
-export const Grid = styled.article`
+export const grid = css`
     grid-row: 2 / 3;
     grid-column: 1 / 2;
     margin: 0 140px;
@@ -32,7 +26,7 @@ export const Grid = styled.article`
     justify-content: space-between;
 `;
 
-export const P = styled.p`
+export const p = css`
     font-family: ${fonts.primary};
     color: #dadada;
     font-weight: 400;
@@ -42,17 +36,17 @@ export const P = styled.p`
     padding: 0 20px;
 `;
 
-export const Col1 = styled.div`
+export const col1 = css`
     grid-row: 1 / 2;
     grid-column: 1 / 2;
 `;
 
-export const Col2 = styled.div`
+export const col2 = css`
     grid-row: 1 / 2;
     grid-column: 2 / 3;
 `;
 
-export const Col3 = styled.div`
+export const col3 = css`
     grid-row: 1 / 2;
     grid-column: 3 / 4;
 `;

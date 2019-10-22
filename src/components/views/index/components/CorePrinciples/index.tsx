@@ -1,30 +1,19 @@
 import React from 'react';
-import { css } from '@emotion/core';
 
 // import { css } from '@emotion/core';
 import Button from 'reusable/Button';
-import {
-    Container,
-    Grid,
-    P,
-    Col1,
-    Col2,
-    Col3,
-    IconAlignment,
-    iconAlignment,
-    buttonStyles,
-} from './styles';
+import * as style from './styles';
 import Icon from './Icon';
 
 const CorePrinciples: React.FC = () => {
     return (
-        <Container>
-            <Grid>
-                <Col1>
-                    <div css={iconAlignment}>
+        <section css={style.container}>
+            <div css={style.grid}>
+                <article css={style.col1}>
+                    <div css={style.iconAlignment}>
                         <Icon name="coding" />
                     </div>
-                    <P>
+                    <p css={style.p}>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                         sed do eiusmod tempor incididunt ut labore et dolore
                         magna aliqua. Pellentesque eu tincidunt tortor aliquam
@@ -32,13 +21,13 @@ const CorePrinciples: React.FC = () => {
                         potenti nullam ac tortor. Risus quis varius quam quisque
                         id diam vel quam elementum. Placerat duis ultricies
                         lacus sed turpis tincidunt.
-                    </P>
-                </Col1>
-                <Col2>
-                    <IconAlignment>
+                    </p>
+                </article>
+                <article css={style.col2}>
+                    <div css={style.iconAlignment}>
                         <Icon name="creative" />
-                    </IconAlignment>
-                    <P>
+                    </div>
+                    <p css={style.p}>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                         sed do eiusmod tempor incididunt ut labore et dolore
                         magna aliqua. Pellentesque eu tincidunt tortor aliquam
@@ -46,13 +35,13 @@ const CorePrinciples: React.FC = () => {
                         potenti nullam ac tortor. Risus quis varius quam quisque
                         id diam vel quam elementum. Placerat duis ultricies
                         lacus sed turpis tincidunt.
-                    </P>
-                </Col2>
-                <Col3>
-                    <IconAlignment>
+                    </p>
+                </article>
+                <article css={style.col3}>
+                    <div css={style.iconAlignment}>
                         <Icon name="social" />
-                    </IconAlignment>
-                    <P>
+                    </div>
+                    <p css={style.p}>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                         sed do eiusmod tempor incididunt ut labore et dolore
                         magna aliqua. Pellentesque eu tincidunt tortor aliquam
@@ -60,11 +49,11 @@ const CorePrinciples: React.FC = () => {
                         potenti nullam ac tortor. Risus quis varius quam quisque
                         id diam vel quam elementum. Placerat duis ultricies
                         lacus sed turpis tincidunt.
-                    </P>
-                </Col3>
-                <Button styles={buttonStyles}>Learn more about us</Button>
-            </Grid>
-        </Container>
+                    </p>
+                </article>
+                <Button styles={style.buttonStyles}>Learn more about us</Button>
+            </div>
+        </section>
     );
 };
 
