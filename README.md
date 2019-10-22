@@ -7,6 +7,8 @@
   TechZone Coding Club Website
 </h1>
 
+[![BrowserStack Status](https://automate.browserstack.com/badge.svg?badge_key=d20xTGxnNHN6eC91Zm9qMUtyV1d4dDgzUlBiMHAvcFNUT2N2ZFNkM0RzND0tLUZRclRldVFYWGUwZUE0cW96MzYzT0E9PQ==--80686c975dd5b43463a0af5b643a55984f1f92b4)](https://automate.browserstack.com/public-build/d20xTGxnNHN6eC91Zm9qMUtyV1d4dDgzUlBiMHAvcFNUT2N2ZFNkM0RzND0tLUZRclRldVFYWGUwZUE0cW96MzYzT0E9PQ==--80686c975dd5b43463a0af5b643a55984f1f92b4)
+
 **All recent additions are located in the `develop` branch**
 
 -   If you are wanting to work on this project then speak to Matt to help contribute
@@ -110,6 +112,14 @@ Show up to the coding club at CTU
 Otherwise my email is: cushing.matt@gmail.com
 
 The club's email is: techzonectucs@gmail.com
+
+---
+
+<a href="https://www.browserstack.com"><img alt="Browserstack Logo" src="src/images/Browserstack-logo.png" height="60"></a>
+
+Thank you to Browser Stack to supporting Open Source and allowing us to test our websites and applications free of charge on different devices. Check them out!
+
+---
 
 ## 🎓 Learning Gatsby
 
