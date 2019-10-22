@@ -2,8 +2,7 @@
 // ─── IMPORTS ────────────────────────────────────────────────────────────────────
 //
 
-import styled from '@emotion/styled';
-import { Link } from 'gatsby';
+import { css } from '@emotion/core';
 
 import { colors, fonts } from '../../../../global/Theme';
 
@@ -11,13 +10,13 @@ import { colors, fonts } from '../../../../global/Theme';
 // ─── STYLES ─────────────────────────────────────────────────────────────────────
 //
 
-export const Container = styled.div`
+export const container = css`
     display: flex;
     flex-direction: column;
     grid: 1 1 / 2 2;
 `;
 
-export const A = styled(Link)`
+export const links = css`
     text-decoration: none;
     font-family: ${fonts.primary};
     font-size: 18px;

@@ -2,6 +2,7 @@
 // ─── IMPORTS ────────────────────────────────────────────────────────────────────
 //
 
+import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 
 import { colors, fonts } from '../../global/Theme';
@@ -10,7 +11,7 @@ import { colors, fonts } from '../../global/Theme';
 // ─── STYLES ─────────────────────────────────────────────────────────────────────
 //
 
-export const Grid = styled.div`
+export const container = css`
     display: grid;
     max-height: 500px;
     min-height: 500px;
@@ -23,7 +24,7 @@ export const Grid = styled.div`
     padding: 48px 140px 0 140px;
 `;
 
-export const Row2 = styled.div`
+export const copyright = css`
     grid-row: 2 / 3;
     grid-column: 1 / -1;
     font-size: 14px;
@@ -31,15 +32,22 @@ export const Row2 = styled.div`
     justify-self: center;
 `;
 
+export const heading = css`
+    font-size: 1.5em;
+    text-shadow: 0px 3px 6px #00000029;
+    font-weight: 400;
+    margin-bottom: 30px;
+`;
+
+export const center = css`
+    text-align: center;
+`;
+
 export const H1 = styled.h1`
     font-size: 1.5em;
     text-shadow: 0px 3px 6px #00000029;
     font-weight: 400;
     margin-bottom: 30px;
-
-    &.center {
-        text-align: center;
-    }
 `;
 
 //

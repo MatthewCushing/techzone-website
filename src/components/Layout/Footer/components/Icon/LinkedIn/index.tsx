@@ -7,7 +7,7 @@
 import React from 'react';
 import { css, SerializedStyles } from '@emotion/core';
 
-import SVG from './styles';
+import * as style from './styles';
 
 //
 // ────────────────────────────────────────────────── II ──────────
@@ -36,13 +36,14 @@ const LinkedIn: React.FunctionComponent<Props> = ({
     styles,
 }) => {
     return (
-        <SVG
+        <svg
             xmlns="http://www.w3.org/2000/svg"
             width={width}
             height={height}
             viewBox={viewBox}
             css={css`
                 ${styles}
+                ${style.svg}
             `}
         >
             <g transform="translate(0 -6.641)">
@@ -54,7 +55,7 @@ const LinkedIn: React.FunctionComponent<Props> = ({
                     />
                 </g>
             </g>
-        </SVG>
+        </svg>
     );
 };
 

@@ -2,15 +2,15 @@
 // ─── IMPORTS ────────────────────────────────────────────────────────────────────
 //
 
-import styled from '@emotion/styled';
+import { css } from '@emotion/core';
 
-import { colors } from '../../global/Theme';
+import { colors } from 'global/Theme';
 
 //
 // ─── STYLES ─────────────────────────────────────────────────────────────────────
 //
 
-export const Container = styled.div`
+export const container = css`
     background-color: ${colors.lightBlue};
     width: 100vw;
     position: relative;

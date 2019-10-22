@@ -4,8 +4,9 @@
 
 import { useStaticQuery, graphql } from 'gatsby';
 import React from 'react';
+import Img from 'gatsby-image';
 
-import { Image, H1, H2, Wrapper } from './styles';
+import * as style from './styles';
 
 //
 // ─── TYPES ──────────────────────────────────────────────────────────────────────
@@ -33,11 +34,11 @@ const Header: React.FC<Props> = ({ siteTitle }) => {
     `);
 
     return (
-        <Wrapper>
-            <Image fluid={data.image.childImageSharp.fluid} />
-            <H1>Code For Fun</H1>
-            <H2>Join The Fun</H2>
-        </Wrapper>
+        <header css={style.container}>
+            <Img css={style.image} fluid={data.image.childImageSharp.fluid} />
+            <h1 css={style.heading}>Code For Fun</h1>
+            <h2 css={style.subheading}>Join The Fun</h2>
+        </header>
     );
 };
 

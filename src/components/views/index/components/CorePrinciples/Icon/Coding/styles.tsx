@@ -1,9 +1,7 @@
-import styled from '@emotion/styled';
+import { css } from '@emotion/core';
 
 import { colors } from 'global/Theme';
 
-const SVG = styled('svg')`
+export const svg = css`
     fill: ${colors.bronze};
 `;
-
-export default SVG;

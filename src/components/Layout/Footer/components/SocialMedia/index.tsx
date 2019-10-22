@@ -3,36 +3,43 @@
 //
 
 import React from 'react';
-import { Link } from 'gatsby';
 
-import { H1 } from '../../styles';
-import { styles, Container } from './styles';
+import { SerializedStyles } from '@emotion/core';
+import * as style from './styles';
 import Icon from '../Icon';
+
+//
+// ─── TYPES ──────────────────────────────────────────────────────────────────────
+//
+
+interface Props {
+    styles: SerializedStyles;
+}
 
 //
 // ─── COMPONENT ──────────────────────────────────────────────────────────────────
 //
 
-const SocialMedia: React.FC = () => {
+const SocialMedia: React.FC<Props> = ({ styles }) => {
     return (
-        <Container>
-            <H1>Social Media</H1>
-            <Link to="https://www.facebook.com">
-                <Icon name="facebook" styles={styles} />
-            </Link>
-            <Link to="https://www.linkedin.com">
-                <Icon name="linkedIn" styles={styles} />
-            </Link>
-            <Link to="https://www.tumblr.com">
-                <Icon name="tumblr" styles={styles} />
-            </Link>
-            <Link to="https://www.twitter.com">
-                <Icon name="twitter" styles={styles} />
-            </Link>
-            <Link to="https://www.youtube.com">
+        <div css={style.container}>
+            <h1 css={styles}>Social Media</h1>
+            <a href="https://www.facebook.com">
+                <Icon name="facebook" styles={style.icon} />
+            </a>
+            <a href="https://www.linkedin.com">
+                <Icon name="linkedIn" styles={style.icon} />
+            </a>
+            <a href="https://www.tumblr.com">
+                <Icon name="tumblr" styles={style.icon} />
+            </a>
+            <a href="https://www.twitter.com">
+                <Icon name="twitter" styles={style.icon} />
+            </a>
+            <a href="https://www.youtube.com">
                 <Icon name="youtube" />
-            </Link>
-        </Container>
+            </a>
+        </div>
     );
 };
 

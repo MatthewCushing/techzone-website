@@ -8,7 +8,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import Header from './Header';
 import Footer from './Footer';
 import Navbar from './Navbar';
-import { Container } from './styles';
+import * as style from './styles';
 
 //
 // ─── TYPES ──────────────────────────────────────────────────────────────────────
@@ -34,12 +34,12 @@ const Layout: FC<Props> = ({ children }) => {
     `);
 
     return (
-        <Container>
+        <div css={style.container}>
             <Navbar />
             <Header siteTitle={data.site.siteMetadata.title} />
             <main>{children}</main>
             <Footer />
-        </Container>
+        </div>
     );
 };
 

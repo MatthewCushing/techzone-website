@@ -3,33 +3,44 @@
 //
 
 import React from 'react';
-import { css } from '@emotion/core';
+import { css, SerializedStyles } from '@emotion/core';
 
 import Button from 'reusable/Button';
-import { H1 } from 'src/components/Layout/Footer/styles';
-import { Container, Form, Input } from './styles';
+import * as style from './styles';
+
+interface Props {
+    styles: SerializedStyles[];
+}
 
 //
 // ─── COMPONENT ──────────────────────────────────────────────────────────────────
 //
 
-const QuestionForm: React.FC = () => {
+const QuestionForm: React.FC<Props> = ({ styles }) => {
     return (
-        <Container>
-            <H1 className="center">Have A Question?</H1>
-            <Form
+        <div>
+            <h2 css={styles} className="center">
+                Have A Question?
+            </h2>
+            <form
                 action="https://formspree.io/cushing.matt@gmail.com"
                 method="POST"
+                css={style.form}
             >
                 <label htmlFor="name">
                     My name is
-                    <Input className="name" type="text" name="name" required />
+                    <input
+                        css={[style.input, style.name]}
+                        type="text"
+                        name="name"
+                        required
+                    />
                 </label>
                 <label htmlFor="question">
                     and I would like to ask
                     <br />
-                    <Input
-                        className="full"
+                    <input
+                        css={[style.input, style.full]}
                         type="text"
                         name="question"
                         required
@@ -39,8 +50,8 @@ const QuestionForm: React.FC = () => {
                 <label htmlFor="email">
                     Please contact me by my email:
                     <br />
-                    <Input
-                        className="full"
+                    <input
+                        css={[style.input, style.full]}
                         type="email"
                         name="_replyto"
                         required
@@ -55,8 +66,8 @@ const QuestionForm: React.FC = () => {
                 >
                     Submit
                 </Button>
-            </Form>
-        </Container>
+            </form>
+        </div>
     );
 };
 

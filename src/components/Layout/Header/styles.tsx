@@ -2,23 +2,22 @@
 // ─── IMPORTS ────────────────────────────────────────────────────────────────────
 //
 
-import styled from '@emotion/styled';
-import Img from 'gatsby-image';
+import { css } from '@emotion/core';
 
 //
 // ─── STYLES ─────────────────────────────────────────────────────────────────────
 //
 
-export const Image = styled(Img)`
+export const image = css`
     height: 70vh;
 `;
 
-export const Wrapper = styled.div`
+export const container = css`
     position: relative;
     color: #fff;
 `;
 
-export const H1 = styled.h1`
+export const heading = css`
     position: absolute;
     font-size: 90px;
     font-family: Lato;
@@ -26,7 +25,7 @@ export const H1 = styled.h1`
     top: 200px;
 `;
 
-export const H2 = styled.h2`
+export const subheading = css`
     position: absolute;
     font-family: Lato;
     font-size: 50px;

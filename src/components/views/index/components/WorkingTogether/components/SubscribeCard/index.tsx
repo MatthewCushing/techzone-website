@@ -4,7 +4,7 @@
 
 import React from 'react';
 
-import { Card, Header, H3, P, Input, Button } from './styles';
+import * as style from './styles';
 
 //
 // ─── COMPONENT ──────────────────────────────────────────────────────────────────
@@ -12,17 +12,23 @@ import { Card, Header, H3, P, Input, Button } from './styles';
 
 const SubscribeCard: React.FC = () => {
     return (
-        <Card>
-            <Header>
-                <H3>Subscribe to our mailing list</H3>
-            </Header>
-            <P>
+        <aside css={style.card}>
+            <div css={style.headerContainer}>
+                <h2 css={style.header}>Subscribe to our mailing list</h2>
+            </div>
+            <p css={style.p}>
                 Join the mailing list to get the latest updates on the club as
                 well as notices for newly scheduled events and schedule changes.
-            </P>
-            <Input type="email" placeholder="example@example.com" />
-            <Button type="button">Submit</Button>
-        </Card>
+            </p>
+            <input
+                css={style.input}
+                type="email"
+                placeholder="example@example.com"
+            />
+            <button css={style.button} type="button">
+                Submit
+            </button>
+        </aside>
     );
 };
 

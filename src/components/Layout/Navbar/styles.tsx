@@ -2,16 +2,15 @@
 // ─── IMPORTS ────────────────────────────────────────────────────────────────────
 //
 
-import styled from '@emotion/styled';
-import { animated } from 'react-spring';
+import { css } from '@emotion/core';
 
-import { colors, fonts } from '../../global/Theme';
+import { colors, fonts } from 'global/Theme';
 
 //
 // ─── STYLES ─────────────────────────────────────────────────────────────────────
 //
 
-export const Ul = animated(styled.ul`
+export const ul = css`
     display: flex;
     list-style: none;
     position: absolute;
@@ -38,21 +37,13 @@ export const Ul = animated(styled.ul`
             background-color: #fff;
         }
     } */
-`);
+`;
 
-export const First = styled.li`
+export const first = css`
     margin-left: 140px;
 `;
 
-export const Last = styled.li`
-    margin-right: 140px;
-    margin-left: 60px;
-    align-self: center;
-    text-decoration: none;
-    color: #fff;
-`;
-
-export const Second = styled.li`
+export const second = css`
     margin-right: auto;
     align-self: center;
     margin-left: 10px;
@@ -63,13 +54,21 @@ export const Second = styled.li`
     }
 `;
 
-export const Third = styled.li`
+export const third = css`
     align-self: center;
 `;
 
-export const Fourth = styled.li`
+export const fourth = css`
     margin-left: 60px;
     align-self: center;
+`;
+
+export const last = css`
+    margin-right: 140px;
+    margin-left: 60px;
+    align-self: center;
+    text-decoration: none;
+    color: #fff;
 `;
 
 //

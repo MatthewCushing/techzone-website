@@ -4,8 +4,9 @@
 
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
+import Img from 'gatsby-image';
 
-import { Container, Image, Article, H3, P } from './styles';
+import * as style from './styles';
 import SubscribeCard from './components/SubscribeCard';
 
 //
@@ -25,20 +26,20 @@ const WorkingTogether: React.FC = () => {
     `);
 
     return (
-        <Container>
-            <Image fixed={data.file.childImageSharp.fixed} />
-            <Article>
-                <H3>Working Together</H3>
-                <P>
+        <section css={style.container}>
+            <Img css={style.image} fixed={data.file.childImageSharp.fixed} />
+            <article css={style.article}>
+                <h2 css={style.heading}>Working Together</h2>
+                <p css={style.p}>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     Itaque sequi, dolorum recusandae nihil sed dolor sapiente
                     maiores explicabo, aliquid quod possimus earum ea fugiat
                     distinctio consequuntur ex delectus molestiae autem
                     reprehenderit id quia!
-                </P>
-            </Article>
+                </p>
+            </article>
             <SubscribeCard />
-        </Container>
+        </section>
     );
 };
 

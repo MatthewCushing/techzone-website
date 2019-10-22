@@ -2,7 +2,7 @@
 // ─── IMPORTS ────────────────────────────────────────────────────────────────────
 //
 
-import styled from '@emotion/styled';
+import { css } from '@emotion/core';
 
 import { colors } from '../../../../global/Theme';
 
@@ -10,19 +10,19 @@ import { colors } from '../../../../global/Theme';
 // ─── STYLES ─────────────────────────────────────────────────────────────────────
 //
 
-export const Container = styled.div`
+export const container = css`
     grid: 3 1 / 4 2;
     justify-self: end;
 `;
 
-export const Form = styled.form`
+export const form = css`
     font-family: Inconsolata;
     font-size: 1.5em;
     text-align: center;
     margin-bottom: 40px;
 `;
 
-export const Input = styled.input`
+export const input = css`
     border: none;
     border-bottom: 4px solid ${colors.lightGreen};
     background-color: transparent;
@@ -38,14 +38,14 @@ export const Input = styled.input`
         border-bottom-color: #fff;
         transform: translateY(-5px);
     }
+`;
 
-    &.name {
-        width: 175px;
-    }
+export const name = css`
+    width: 175px;
+`;
 
-    &.full {
-        width: 600px;
-    }
+export const full = css`
+    width: 600px;
 `;
 
 //

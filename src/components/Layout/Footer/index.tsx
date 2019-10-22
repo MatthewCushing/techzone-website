@@ -7,7 +7,7 @@ import React from 'react';
 import SiteLinks from './components/SiteLinks';
 import SocialMedia from './components/SocialMedia';
 import QuestionForm from './components/QuestionForm';
-import { Grid, Row2 } from './styles';
+import * as cssProps from './styles';
 
 //
 // ─── COMPONENT ──────────────────────────────────────────────────────────────────
@@ -17,12 +17,14 @@ const Footer: React.SFC = () => {
     const date = new Date();
 
     return (
-        <Grid>
-            <SiteLinks />
-            <SocialMedia />
-            <QuestionForm />
-            <Row2>Copyright &copy; {date.getFullYear()} Matthew Cushing</Row2>
-        </Grid>
+        <footer css={cssProps.container}>
+            <SiteLinks styles={cssProps.heading} />
+            <SocialMedia styles={cssProps.heading} />
+            <QuestionForm styles={[cssProps.heading, cssProps.center]} />
+            <div css={cssProps.copyright}>
+                Copyright &copy; {date.getFullYear()} Matthew Cushing
+            </div>
+        </footer>
     );
 };
 
