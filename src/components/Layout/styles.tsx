@@ -9,7 +9,9 @@ import { css } from '@emotion/core';
 //
 
 export const container = css`
-    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
 `;
 
 //

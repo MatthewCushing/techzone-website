@@ -13,7 +13,8 @@ export const image = css`
 `;
 
 export const container = css`
-    position: relative;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
     color: #fff;
 `;
 

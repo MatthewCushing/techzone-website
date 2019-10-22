@@ -4,6 +4,7 @@
 
 import React, { ReactNode, FC } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
+import { Global, css } from '@emotion/core';
 
 import Header from './Header';
 import Footer from './Footer';
@@ -34,12 +35,20 @@ const Layout: FC<Props> = ({ children }) => {
     `);
 
     return (
-        <div css={style.container}>
-            <Navbar />
-            <Header siteTitle={data.site.siteMetadata.title} />
+        <>
+            <Global
+                styles={css`
+                    box-sizing: border-box;
+                    overflow-x: hidden;
+                `}
+            />
+            <div css={style.container}>
+                <Header siteTitle={data.site.siteMetadata.title} />
+                <Navbar />
+            </div>
             <main>{children}</main>
             <Footer />
-        </div>
+        </>
     );
 };
 

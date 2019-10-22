@@ -12,7 +12,6 @@ import { colors } from 'global/Theme';
 
 export const container = css`
     background-color: ${colors.lightBlue};
-    width: 100vw;
     position: relative;
     display: grid;
     grid-template-rows: auto auto;

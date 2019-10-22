@@ -13,8 +13,6 @@ import { colors, fonts } from '../../global/Theme';
 
 export const container = css`
     display: grid;
-    max-height: 500px;
-    min-height: 500px;
     padding-right: 140px;
     grid-template-columns: 20% 30% 50%;
     font-family: ${fonts.primary};
@@ -41,13 +39,6 @@ export const heading = css`
 
 export const center = css`
     text-align: center;
-`;
-
-export const H1 = styled.h1`
-    font-size: 1.5em;
-    text-shadow: 0px 3px 6px #00000029;
-    font-weight: 400;
-    margin-bottom: 30px;
 `;
 
 //

@@ -11,64 +11,54 @@ import { colors, fonts } from 'global/Theme';
 //
 
 export const ul = css`
-    display: flex;
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    z-index: 1;
     list-style: none;
-    position: absolute;
-    width: 100%;
-    z-index: 2;
-    font-family: ${fonts.primary};
+    display: grid;
+    grid-template-columns: auto 1fr auto auto auto;
+    grid-template-rows: 3rem;
     font-size: 24px;
-    color: #fff;
-    /* margin-top: 48px; */
+    font-family: ${fonts.primary};
+    margin: 0 140px;
 
-    & > li > .link {
+    & > li > a {
+        color: white;
         text-decoration: none;
-        color: #fff;
-
-        &.home,
-        &.about,
-        &.contact {
-            color: ${colors.lightGreen};
-        }
     }
 
-    /* html:not([data-scroll='0']) {
-        .sticky {
-            background-color: #fff;
-        }
-    } */
-`;
-
-export const first = css`
-    margin-left: 140px;
-`;
-
-export const second = css`
-    margin-right: auto;
-    align-self: center;
-    margin-left: 10px;
-
-    & .zone {
+    & > li > .home,
+    & > li > .about,
+    & > li > .contact {
         color: ${colors.lightGreen};
-        padding-left: 2px;
     }
 `;
 
-export const third = css`
-    align-self: center;
+export const logoAlign = css`
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 1fr;
+
+    & > span {
+        align-self: center;
+    }
 `;
 
-export const fourth = css`
-    margin-left: 60px;
-    align-self: center;
+export const tech = css`
+    color: ${colors.lightGreen};
+    margin-left: 10px;
 `;
 
-export const last = css`
-    margin-right: 140px;
-    margin-left: 60px;
+export const zone = css`
+    margin-left: 2px;
+`;
+
+export const spacing = css`
+    margin-left: 50px;
+`;
+
+export const verticalAlign = css`
     align-self: center;
-    text-decoration: none;
-    color: #fff;
 `;
 
 //

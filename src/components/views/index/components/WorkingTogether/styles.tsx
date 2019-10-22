@@ -12,12 +12,12 @@ import { colors, fonts } from '../../../../global/Theme';
 
 export const container = css`
     background-color: ${colors.lightBlue};
-    width: 100vw;
+    /* width: 100vw; */
     display: grid;
     grid-template-columns: 25% 25% 50%;
     height: 350px;
     padding: 48px 140px;
-    width: 100%;
+    /* width: 100%; */
 `;
 
 export const image = css`

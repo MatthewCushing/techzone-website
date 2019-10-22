@@ -16,7 +16,7 @@ export const headerContainer = css`
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
     height: 100px;
-    width: 100%;
+    /* width: 100%; */
 `;
 
 export const header = css`

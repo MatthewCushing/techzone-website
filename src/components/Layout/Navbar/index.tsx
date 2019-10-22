@@ -7,7 +7,6 @@ import { graphql, useStaticQuery, Link } from 'gatsby';
 import Img from 'gatsby-image';
 import { animated, useSpring } from 'react-spring';
 
-import { Ul, First, Last, Second, Third, Fourth } from './styles';
 import * as style from './styles';
 
 //
@@ -43,29 +42,30 @@ const Navbar: React.FC = () => {
 
     return (
         <animated.ul css={style.ul} style={fadeIn}>
-            <li css={style.first}>
-                <Link className="link" to="/">
-                    <Img fixed={data.placeholderImage.childImageSharp.fixed} />
+            <li>
+                <Link to="/">
+                    <div css={style.logoAlign}>
+                        <Img
+                            fixed={data.placeholderImage.childImageSharp.fixed}
+                        />
+                        <span css={style.tech}>TECH</span>
+                        <span css={style.zone}>ZONE</span>
+                    </div>
                 </Link>
             </li>
-            <li css={style.second}>
-                <Link className="link" to="/">
-                    <span className="tech">TECH</span>
-                    <span className="zone">ZONE</span>
-                </Link>
-            </li>
-            <li css={style.third}>
-                <Link className="link" activeClassName="home" to="/">
+            <div aria-hidden="true" />
+            <li css={style.verticalAlign}>
+                <Link activeClassName="home" to="/">
                     Home
                 </Link>
             </li>
-            <li css={style.fourth}>
-                <Link className="link" activeClassName="about" to="/about">
+            <li css={[style.spacing, style.verticalAlign]}>
+                <Link activeClassName="about" to="/about">
                     About
                 </Link>
             </li>
-            <li css={style.last}>
-                <Link className="link" activeClassName="contact" to="/contact">
+            <li css={[style.spacing, style.verticalAlign]}>
+                <Link activeClassName="contact" to="/contact">
                     Contact
                 </Link>
             </li>
