@@ -5,7 +5,7 @@
 import React from 'react';
 import { css, SerializedStyles } from '@emotion/core';
 
-import SVG from './styles';
+import * as style from './styles';
 
 //
 // ─── TYPES ──────────────────────────────────────────────────────────────────────
@@ -30,13 +30,14 @@ const Youtube: React.FunctionComponent<Props> = ({
     styles,
 }) => {
     return (
-        <SVG
+        <svg
             xmlns="http://www.w3.org/2000/svg"
             width={width}
             height={height}
             viewBox={viewBox}
             css={css`
                 ${styles}
+                ${style.svg}
             `}
         >
             <g transform="translate(0 -81.6)">
@@ -50,7 +51,7 @@ const Youtube: React.FunctionComponent<Props> = ({
                     </g>
                 </g>
             </g>
-        </SVG>
+        </svg>
     );
 };
 

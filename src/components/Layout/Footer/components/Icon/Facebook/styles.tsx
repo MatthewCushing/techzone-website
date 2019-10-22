@@ -1,7 +1,7 @@
-import styled from '@emotion/styled';
-import { colors } from '../../../../../global/Theme';
+import { css } from '@emotion/core';
+import { colors } from 'global/Theme';
 
-const SVG = styled('svg')`
+export const svg = css`
     fill: ${colors.lightGray};
     transition: all 0.3s ease 0s;
 
@@ -10,5 +10,3 @@ const SVG = styled('svg')`
         transform: translateY(-5px);
     }
 `;
-
-export default SVG;
