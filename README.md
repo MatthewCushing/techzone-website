@@ -11,6 +11,8 @@
 
 **All recent additions are located in the `develop` branch**
 
+We are testing the site via the develop branch through netlify at the url: https://nifty-lumiere-496b16.netlify.com/
+
 -   If you are wanting to work on this project then speak to Matt to help contribute
 -   You don't have to know anything more than HTML and CSS to contribute even though this project uses much more than that.
 -   This project is using Gatsby, React.js, and Typescript
