@@ -53,6 +53,7 @@
         "react/no-unescaped-entities": 0,
         "react/jsx-one-expression-per-line": 0,
         "@typescript-eslint/no-explicit-any": 0,
+        "@typescript-eslint/no-var-requires": 0,
         "default-case": 0
     }
 }
