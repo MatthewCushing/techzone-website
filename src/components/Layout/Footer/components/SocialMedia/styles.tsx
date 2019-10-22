@@ -2,18 +2,17 @@
 // ─── IMPORTS ────────────────────────────────────────────────────────────────────
 //
 
-import styled from '@emotion/styled';
-import { css, SerializedStyles } from '@emotion/core';
+import { css } from '@emotion/core';
 
 //
 // ─── STYLES ─────────────────────────────────────────────────────────────────────
 //
 
-export const Container = styled.div`
+export const container = css`
     grid: 2 1 / 3 2;
 `;
 
-export const styles: SerializedStyles = css`
+export const icon = css`
     margin-right: 40px;
 `;
 
